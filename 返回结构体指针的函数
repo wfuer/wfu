@@ -1,0 +1,27 @@
+typedef struct Node
+{
+    int x;
+    struct Node * next;
+}node,*link;
+
+node * (pfun)(link *L)
+{
+    printf("please int:");
+    scanf("%d", &(*L)->x);
+    return *L;
+}
+
+void print(node * L)
+{
+    printf("%d", L->x);
+}
+
+int main()
+{
+   link L = (node *)malloc(sizeof(node)); 
+   link s = NULL;
+   s = pfun(&L);
+   print(s);
+
+   return 0;
+}
